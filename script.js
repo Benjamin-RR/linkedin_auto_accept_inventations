@@ -1,16 +1,16 @@
 const buttons = document.getElementsByTagName("button");
-let submits = [];
+let accepts = [];
 for(let i = 0; i < buttons.length; i++) {
     if (buttons[i].innerText == "Accept") {
-        submits.push(buttons[i]);
+        accepts.push(buttons[i]);
     }
 }
 
 const acceptAll = async () => {
-    for(let i = 0; i < submits.length; i++){
-        console.log(`button ${i} : ${submits[i]}`);
-        await new Promise(resolve => setTimeout(resolve, 1000))
+    for(let i = 0; i < accepts.length; i++){
+        // accepts[i].click()
+        await new Promise(resolve => setTimeout(resolve, 500))
     }
 }
-console.log("SUBMITS : ", submits);
+console.log("ACCEPTS : ", accepts);
 acceptAll();
