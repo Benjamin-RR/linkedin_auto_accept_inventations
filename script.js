@@ -8,9 +8,8 @@ for(let i = 0; i < buttons.length; i++) {
 
 const acceptAll = async () => {
     for(let i = 0; i < accepts.length; i++){
-        // accepts[i].click()
-        await new Promise(resolve => setTimeout(resolve, 500))
+        accepts[i].click()
+        await new Promise(resolve => setTimeout(resolve, 142))
     }
 }
-console.log("ACCEPTS : ", accepts);
 acceptAll();
